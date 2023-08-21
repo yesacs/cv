@@ -1,0 +1,15 @@
+@import 'src/_mixins.scss';
+
+.skill-bar {
+  display: block;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  margin-top: 0.5rem;
+
+  .skill-bar-inner {
+    background: linear-gradient(90deg, orange, limegreen);
+    //background: $compliment;
+    height: 100%;
+  }
+}

@@ -1,2 +1,69 @@
+@import 'src/_mixins.scss';
+
+@keyframes bg-color {
+  0% {
+    background: brown;
+    color: invert(brown);
+  }
+  40% {
+    background: skyblue;
+    color: invert(skyblue);
+  }
+  100% {
+    background: brown;
+    color: invert(brown);
+  }
+}
+
 .resume-header {
+  color: skyblue;
+  padding: $size-3 $size-3 $size-3;
+
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+
+  h1,
+  h2 {
+    font-weight: bold;
+    line-height: 0.82em;
+    letter-spacing: -0.08em;
+  }
+
+  h1 {
+    font-size: 100px;
+    width: 50%;
+  }
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    margin: 2rem 0;
+    line-height: 1em;
+
+    @include media('<=tablet') {
+      margin: 1rem 0;
+      font-size: 16px;
+    }
+  }
+
+  a {
+    color: invert(skyblue);
+
+    span {
+      text-decoration: underline;
+    }
+
+    @include media('<=tablet') {
+      color: skyblue;
+    }
+  }
+}
+
+.resume-header-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

@@ -1,0 +1,121 @@
+@import 'src/_mixins.scss';
+
+@keyframes bg-color {
+  0% {
+    background: brown;
+    color: invert(brown);
+  }
+  40% {
+    background: skyblue;
+    color: invert(skyblue);
+  }
+  100% {
+    background: brown;
+    color: invert(brown);
+  }
+}
+
+// standard
+body {
+  font-family: Helvetica, sans-serif;
+  background: linear-gradient(-15deg, skyblue, invert(skyblue));
+  color: invert(skyblue);
+}
+
+.resume-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+
+  @include media('<=tablet') {
+    flex-direction: column;
+    justify-content: unset;
+    height: unset;
+  }
+}
+
+.resume-main {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+
+  @include media('<=tablet') {
+    flex-direction: column;
+    justify-content: unset;
+    height: unset;
+  }
+}
+
+.resume-skills {
+  flex: 1;
+  padding: $size-2;
+  background: #333;
+  color: #fff;
+  height: 100%;
+  overflow: auto;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.7);
+
+  & > div {
+    margin: 0.5rem 0 2rem;
+    color: #444;
+    display: block;
+    font-size: 20px;
+    color: $compliment;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: -0.05em;
+  }
+}
+
+.resume-experience {
+  flex: 3;
+  height: 100%;
+  overflow: auto;
+  padding: $size-2;
+  padding-left: $size-1;
+
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  background: #fff;
+  color: #111;
+}
+
+.resume-job {
+  flex: 0 0 100%;
+  font-family: Bitter;
+
+  &:not(:last-child) {
+    margin-bottom: $size-4;
+    padding-bottom: $size-4;
+    border-bottom: 1px solid #ccc;
+  }
+  .resume-job-title {
+    font-size: 24px;
+    line-height: 1em;
+    font-weight: bold;
+
+    small {
+      display: block;
+      font-size: 50%;
+    }
+  }
+
+  ul {
+    list-style: disc;
+    margin-left: 1rem;
+  }
+}
+
+.resume-footer {
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: $size-3 $size-3 $size-3;
+
+  a {
+    color: invert(skyblue);
+  }
+}
