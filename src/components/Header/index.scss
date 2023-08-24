@@ -6,9 +6,13 @@
   max-width: 400px;
   display: flex;
   overflow: auto;
-  height: 90%;
+  height: 100%;
 
-  @include media('<=tablet') {
+  @include media('<desktop') {
+    height: 90%;
+  }
+
+  @include media('<tablet') {
     max-width: unset;
   }
 

@@ -11668,13 +11668,19 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .resume-header {
   flex: 2;
   max-width: 400px;
-  height: 90%;
+  height: 100%;
   padding: 2rem;
   display: flex;
   overflow: auto;
 }
 
-@media (width <= 900px) {
+@media (width <= 1299px) {
+  .resume-header {
+    height: 90%;
+  }
+}
+
+@media (width <= 899px) {
   .resume-header {
     max-width: unset;
   }
