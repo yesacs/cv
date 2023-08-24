@@ -103,6 +103,7 @@ export default {
   ],
   skills: {
     React: 10,
+    Redux: 9,
     jQuery: 10,
     Knockout: 10,
     Parcel: 9,

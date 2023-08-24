@@ -2857,8 +2857,14 @@ var _skillBarDefault = parcelHelpers.interopDefault(_skillBar);
                                     children: [
                                         j.company,
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("small", {
-                                            children: j.title
-                                        }, void 0, false, {
+                                            children: [
+                                                j.title,
+                                                ", ",
+                                                j.duration.start,
+                                                "—",
+                                                j.duration.end
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "src/App.tsx",
                                             lineNumber: 29,
                                             columnNumber: 15
@@ -2874,12 +2880,12 @@ var _skillBarDefault = parcelHelpers.interopDefault(_skillBar);
                                             children: d
                                         }, n, false, {
                                             fileName: "src/App.tsx",
-                                            lineNumber: 33,
+                                            lineNumber: 35,
                                             columnNumber: 17
                                         }, undefined))
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 31,
+                                    lineNumber: 33,
                                     columnNumber: 13
                                 }, undefined)
                             ]
@@ -28245,6 +28251,7 @@ exports.default = {
     ],
     skills: {
         React: 10,
+        Redux: 9,
         jQuery: 10,
         Knockout: 10,
         Parcel: 9,

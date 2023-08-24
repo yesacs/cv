@@ -26,7 +26,9 @@ ReactDOM.render(
           <div className="resume-job" key={i}>
             <h4 className="resume-job-title">
               {j.company}
-              <small>{j.title}</small>
+              <small>
+                {j.title}, {j.duration.start}&mdash;{j.duration.end}
+              </small>
             </h4>
             <ul>
               {get(j, 'duties', []).map((d, n) => (

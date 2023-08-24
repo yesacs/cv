@@ -11666,10 +11666,18 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .resume-header {
-  flex: 1;
-  max-width: 350px;
+  flex: 2;
+  max-width: 400px;
+  height: 90%;
   padding: 2rem;
   display: flex;
+  overflow: auto;
+}
+
+@media (width <= 900px) {
+  .resume-header {
+    max-width: unset;
+  }
 }
 
 .resume-header h1, .resume-header h2 {
@@ -11680,7 +11688,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .resume-header h1 {
-  font-size: 100px;
+  font-size: 90px;
 }
 
 .resume-header h2 {
@@ -11694,7 +11702,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   line-height: 1em;
 }
 
-@media (width <= 800px) {
+@media (width <= 900px) {
   .resume-header p {
     margin: 1rem 0;
     font-size: 16px;
@@ -11703,12 +11711,6 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 .resume-header a span {
   text-decoration: underline;
-}
-
-@media (width <= 800px) {
-  .resume-header a {
-    color: #87ceeb;
-  }
 }
 
 .resume-header-wrapper {
@@ -23399,10 +23401,18 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   }
 }
 
-body {
+html, body {
   color: #f652a0;
   background: linear-gradient(-15deg, #bcece0, #36eee0);
+  height: 100%;
   font-family: Helvetica, sans-serif;
+  overflow-y: hidden !important;
+}
+
+@media (width <= 899px) {
+  html, body {
+    overflow-y: auto !important;
+  }
 }
 
 .resume-container {
@@ -23411,7 +23421,7 @@ body {
   display: flex;
 }
 
-@media (width <= 799px) {
+@media (width <= 899px) {
   .resume-container {
     justify-content: unset;
     flex-direction: column;
@@ -23425,15 +23435,16 @@ body {
   display: flex;
 }
 
-@media (width <= 1199px) {
+@media (width <= 1299px) {
   .resume-main {
     justify-content: unset;
     flex-direction: column;
+    flex: 1;
     overflow: auto;
   }
 }
 
-@media (width <= 799px) {
+@media (width <= 899px) {
   .resume-main {
     height: auto;
   }
@@ -23443,17 +23454,18 @@ body {
   color: #fff;
   background: #333;
   flex: 1;
+  max-width: 300px;
   height: 100%;
   padding: 1rem 2rem;
   overflow: auto;
   box-shadow: 10px 10px 40px #000000b3;
 }
 
-@media (width <= 1199px) {
+@media (width <= 1299px) {
   .resume-skills {
     overflow: unset;
+    max-width: unset;
     flex-wrap: wrap;
-    justify-content: space-between;
     height: auto;
     display: flex;
   }
@@ -23463,15 +23475,23 @@ body {
   color: #36eee0;
   letter-spacing: -.05em;
   margin: .5rem 0 1rem;
+  padding: .25rem 1rem;
   font-size: 14px;
   font-weight: bold;
   line-height: 18px;
   display: block;
 }
 
-@media (width <= 1199px) {
+@media (width <= 1299px) {
   .resume-skills > div {
-    flex: 0 0 45%;
+    flex: 0 0 33%;
+    font-size: 16px;
+  }
+}
+
+@media (width <= 899px) {
+  .resume-skills > div {
+    flex: 0 0 50%;
     font-size: 16px;
   }
 }
@@ -23488,8 +23508,9 @@ body {
   overflow: auto;
 }
 
-@media (width <= 1199px) {
+@media (width <= 1299px) {
   .resume-experience {
+    max-width: unset;
     overflow: unset;
     height: auto;
   }

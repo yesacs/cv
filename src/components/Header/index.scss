@@ -2,9 +2,15 @@
 
 .resume-header {
   padding: $size-3 $size-3 $size-3;
-  flex: 1;
-  max-width: 350px;
+  flex: 2;
+  max-width: 400px;
   display: flex;
+  overflow: auto;
+  height: 90%;
+
+  @include media('<=tablet') {
+    max-width: unset;
+  }
 
   h1,
   h2 {
@@ -15,7 +21,7 @@
   }
 
   h1 {
-    font-size: 100px;
+    font-size: 90px;
   }
   h2 {
     font-size: 24px;
@@ -36,10 +42,6 @@
   a {
     span {
       text-decoration: underline;
-    }
-
-    @include media('<=tablet') {
-      color: skyblue;
     }
   }
 }

@@ -16,10 +16,17 @@
 }
 
 // standard
+html,
 body {
   font-family: Helvetica, sans-serif;
   background: linear-gradient(-15deg, $primary, $compliment);
   color: $highlight;
+  height: 100%;
+  overflow-y: hidden !important;
+
+  @include media('<tablet') {
+    overflow-y: auto !important;
+  }
 }
 
 .resume-container {
@@ -43,6 +50,7 @@ body {
     flex-direction: column;
     justify-content: unset;
     overflow: auto;
+    flex: 1;
   }
 
   @include media('<tablet') {
@@ -52,6 +60,7 @@ body {
 
 .resume-skills {
   flex: 1;
+  max-width: 300px;
   padding: 1rem 2rem;
   background: #333;
   color: #fff;
@@ -62,10 +71,11 @@ body {
   @include media('<desktop') {
     height: auto;
     overflow: unset;
+    max-width: unset;
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    //justify-content: space-between;
   }
 
   & > div {
@@ -77,10 +87,16 @@ body {
     font-weight: bold;
     line-height: 18px;
     letter-spacing: -0.05em;
+    padding: 0.25rem 1rem;
 
     @include media('<desktop') {
       font-size: 16px;
-      flex: 0 0 45%;
+      flex: 0 0 33%;
+    }
+
+    @include media('<tablet') {
+      font-size: 16px;
+      flex: 0 0 50%;
     }
   }
 }
@@ -100,6 +116,7 @@ body {
 
   @include media('<desktop') {
     height: auto;
+    max-width: unset;
     overflow: unset;
   }
 }
