@@ -1,6 +1,6 @@
-@import "https://fonts.googleapis.com/css2?family=Bitter&display=swap";
-@import "https://fonts.googleapis.com/css2?family=Bitter&display=swap";
-@import "https://fonts.googleapis.com/css2?family=Bitter&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Bitter&family=Roboto+Mono&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Bitter&family=Roboto+Mono&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Bitter&family=Roboto+Mono&display=swap";
 .pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis, .file-cta, .file-name, .select select, .textarea, .input, .button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -11665,67 +11665,47 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 3rem 1.5rem 6rem;
 }
 
-@keyframes bg-color {
-  0% {
-    color: #5ad5d5;
-    background: brown;
-  }
-
-  40% {
-    color: #783114;
-    background: #87ceeb;
-  }
-
-  100% {
-    color: #5ad5d5;
-    background: brown;
-  }
-}
-
 .resume-header {
-  color: #87ceeb;
   flex: 1;
-  max-width: 400px;
+  max-width: 350px;
   padding: 2rem;
   display: flex;
 }
 
 .resume-header h1, .resume-header h2 {
   letter-spacing: -.08em;
+  color: #f652a0;
   font-weight: bold;
   line-height: .82em;
 }
 
 .resume-header h1 {
-  width: 50%;
   font-size: 100px;
 }
 
 .resume-header h2 {
+  text-align: right;
   font-size: 24px;
 }
 
 .resume-header p {
+  color: #4c5270;
   margin: 2rem 0;
   line-height: 1em;
 }
 
-@media (width <= 768px) {
+@media (width <= 800px) {
   .resume-header p {
     margin: 1rem 0;
     font-size: 16px;
   }
 }
 
-.resume-header a {
-  color: #783114;
-}
-
 .resume-header a span {
   text-decoration: underline;
 }
 
-@media (width <= 768px) {
+@media (width <= 800px) {
   .resume-header a {
     color: #87ceeb;
   }
@@ -23404,24 +23384,24 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 @keyframes bg-color {
   0% {
-    color: #5ad5d5;
-    background: brown;
+    color: #c9111f;
+    background: #36eee0;
   }
 
   40% {
-    color: #783114;
-    background: #87ceeb;
+    color: #43131f;
+    background: #bcece0;
   }
 
   100% {
-    color: #5ad5d5;
-    background: brown;
+    color: #c9111f;
+    background: #36eee0;
   }
 }
 
 body {
-  color: #783114;
-  background: linear-gradient(-15deg, #87ceeb, #783114);
+  color: #f652a0;
+  background: linear-gradient(-15deg, #bcece0, #36eee0);
   font-family: Helvetica, sans-serif;
 }
 
@@ -23431,11 +23411,11 @@ body {
   display: flex;
 }
 
-@media (width <= 768px) {
+@media (width <= 799px) {
   .resume-container {
     justify-content: unset;
-    height: unset;
     flex-direction: column;
+    height: auto;
   }
 }
 
@@ -23445,11 +23425,17 @@ body {
   display: flex;
 }
 
-@media (width <= 768px) {
+@media (width <= 1199px) {
   .resume-main {
     justify-content: unset;
-    height: unset;
     flex-direction: column;
+    overflow: auto;
+  }
+}
+
+@media (width <= 799px) {
+  .resume-main {
+    height: auto;
   }
 }
 
@@ -23458,19 +23444,36 @@ body {
   background: #333;
   flex: 1;
   height: 100%;
-  padding: 2.5rem;
+  padding: 1rem 2rem;
   overflow: auto;
   box-shadow: 10px 10px 40px #000000b3;
 }
 
+@media (width <= 1199px) {
+  .resume-skills {
+    overflow: unset;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+    display: flex;
+  }
+}
+
 .resume-skills > div {
-  color: orange;
+  color: #36eee0;
   letter-spacing: -.05em;
-  margin: .5rem 0 2rem;
-  font-size: 20px;
+  margin: .5rem 0 1rem;
+  font-size: 14px;
   font-weight: bold;
   line-height: 18px;
   display: block;
+}
+
+@media (width <= 1199px) {
+  .resume-skills > div {
+    flex: 0 0 45%;
+    font-size: 16px;
+  }
 }
 
 .resume-experience {
@@ -23483,6 +23486,13 @@ body {
   padding: 2.5rem 2.5rem 2.5rem 3rem;
   display: flex;
   overflow: auto;
+}
+
+@media (width <= 1199px) {
+  .resume-experience {
+    overflow: unset;
+    height: auto;
+  }
 }
 
 .resume-job {
@@ -23522,7 +23532,7 @@ body {
 }
 
 .resume-footer a {
-  color: #783114;
+  color: #43131f;
 }
 
 .pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis, .file-cta, .file-name, .select select, .textarea, .input, .button {
@@ -35189,7 +35199,11 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 3rem 1.5rem 6rem;
 }
 
-.skill-bar {
+.skill-bar-wrapper {
+  font-family: Roboto, monospace;
+}
+
+.skill-bar-wrapper .skill-bar {
   background: #0000004d;
   width: 100%;
   height: 10px;
@@ -35197,9 +35211,10 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   display: block;
 }
 
-.skill-bar .skill-bar-inner {
-  background: linear-gradient(90deg, orange, #32cd32);
+.skill-bar-wrapper .skill-bar .skill-bar-inner {
+  background: linear-gradient(90deg, #f652a04d, #f652a0);
   height: 100%;
+  transition: width .5s;
 }
 
 /*# sourceMappingURL=index.b249f258.css.map */

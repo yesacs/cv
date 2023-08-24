@@ -1,15 +1,24 @@
 @import 'src/_mixins.scss';
 
-.skill-bar {
-  display: block;
-  height: 10px;
-  background: rgba(0, 0, 0, 0.3);
-  width: 100%;
-  margin-top: 0.5rem;
+.skill-bar-wrapper {
+  font-family: Roboto, monospace;
 
-  .skill-bar-inner {
-    background: linear-gradient(90deg, orange, limegreen);
-    //background: $compliment;
-    height: 100%;
+  .skill-bar {
+    display: block;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    margin-top: 0.5rem;
+
+    .skill-bar-inner {
+      transition: width 500ms ease;
+
+      background: linear-gradient(
+        90deg,
+        transparentize($highlight, 0.7),
+        $highlight
+      );
+      height: 100%;
+    }
   }
 }

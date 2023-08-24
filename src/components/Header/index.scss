@@ -1,26 +1,9 @@
 @import 'src/_mixins.scss';
 
-@keyframes bg-color {
-  0% {
-    background: brown;
-    color: invert(brown);
-  }
-  40% {
-    background: skyblue;
-    color: invert(skyblue);
-  }
-  100% {
-    background: brown;
-    color: invert(brown);
-  }
-}
-
 .resume-header {
-  color: skyblue;
   padding: $size-3 $size-3 $size-3;
-
   flex: 1;
-  max-width: 400px;
+  max-width: 350px;
   display: flex;
 
   h1,
@@ -28,19 +11,21 @@
     font-weight: bold;
     line-height: 0.82em;
     letter-spacing: -0.08em;
+    color: $highlight;
   }
 
   h1 {
     font-size: 100px;
-    width: 50%;
   }
   h2 {
     font-size: 24px;
+    text-align: right;
   }
 
   p {
     margin: 2rem 0;
     line-height: 1em;
+    color: $sublight;
 
     @include media('<=tablet') {
       margin: 1rem 0;
@@ -49,8 +34,6 @@
   }
 
   a {
-    color: invert(skyblue);
-
     span {
       text-decoration: underline;
     }

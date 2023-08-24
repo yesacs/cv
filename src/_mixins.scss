@@ -3,13 +3,13 @@ $compliment: #ffdc00;
 $compliment: orange;
 $highlight: limegreen;
 
-@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Roboto+Mono&display=swap');
 @import 'bulma/bulma.sass';
 
 $breakpoints: (
-  phone: 320px,
-  tablet: 768px,
-  desktop: 1300px,
+  phone: 400px,
+  tablet: 800px,
+  desktop: 1200px,
 );
 
 @import 'include-media/dist/_include-media.scss';
@@ -17,3 +17,8 @@ $breakpoints: (
 body {
   //font-family: Bitter;
 }
+
+$primary: #bcece0;
+$compliment: #36eee0;
+$highlight: #f652a0;
+$sublight: #4c5270;

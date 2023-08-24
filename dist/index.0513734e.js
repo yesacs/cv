@@ -28720,8 +28720,13 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _indexScss = require("./index.scss");
+var _s = $RefreshSig$();
 function SkillBar(props) {
-    let { skill: s, strength: v } = props;
+    _s();
+    let { skill: s, strength: v } = props, [rendered, setRendered] = (0, _react.useState)(false), barWidth = (rendered ? v : 0) / 10 * 100;
+    (0, _react.useEffect)(()=>{
+        setTimeout(()=>setRendered(true), 500);
+    }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "skill-bar-wrapper",
         children: [
@@ -28730,7 +28735,7 @@ function SkillBar(props) {
                 children: s
             }, void 0, false, {
                 fileName: "src/components/SkillBar/index.tsx",
-                lineNumber: 10,
+                lineNumber: 16,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28738,25 +28743,26 @@ function SkillBar(props) {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "skill-bar-inner",
                     style: {
-                        width: `${v / 10 * 100}%`
+                        width: `${barWidth}%`
                     }
                 }, void 0, false, {
                     fileName: "src/components/SkillBar/index.tsx",
-                    lineNumber: 12,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/SkillBar/index.tsx",
-                lineNumber: 11,
+                lineNumber: 17,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/SkillBar/index.tsx",
-        lineNumber: 9,
+        lineNumber: 15,
         columnNumber: 5
     }, this);
 }
+_s(SkillBar, "kzTmK+RaULWy0tsjSu4ZEmjPuxM=");
 _c = SkillBar;
 exports.default = SkillBar;
 var _c;

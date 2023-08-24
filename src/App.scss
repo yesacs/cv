@@ -2,24 +2,24 @@
 
 @keyframes bg-color {
   0% {
-    background: brown;
-    color: invert(brown);
+    background: $compliment;
+    color: invert($compliment);
   }
   40% {
-    background: skyblue;
-    color: invert(skyblue);
+    background: $primary;
+    color: invert($primary);
   }
   100% {
-    background: brown;
-    color: invert(brown);
+    background: $compliment;
+    color: invert($compliment);
   }
 }
 
 // standard
 body {
   font-family: Helvetica, sans-serif;
-  background: linear-gradient(-15deg, skyblue, invert(skyblue));
-  color: invert(skyblue);
+  background: linear-gradient(-15deg, $primary, $compliment);
+  color: $highlight;
 }
 
 .resume-container {
@@ -27,10 +27,10 @@ body {
   justify-content: center;
   height: 100vh;
 
-  @include media('<=tablet') {
+  @include media('<tablet') {
     flex-direction: column;
     justify-content: unset;
-    height: unset;
+    height: auto;
   }
 }
 
@@ -39,31 +39,49 @@ body {
   justify-content: space-between;
   font-size: 12px;
 
-  @include media('<=tablet') {
+  @include media('<desktop') {
     flex-direction: column;
     justify-content: unset;
-    height: unset;
+    overflow: auto;
+  }
+
+  @include media('<tablet') {
+    height: auto;
   }
 }
 
 .resume-skills {
   flex: 1;
-  padding: $size-2;
+  padding: 1rem 2rem;
   background: #333;
   color: #fff;
   height: 100%;
   overflow: auto;
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.7);
 
+  @include media('<desktop') {
+    height: auto;
+    overflow: unset;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   & > div {
-    margin: 0.5rem 0 2rem;
+    margin: 0.5rem 0 1rem;
     color: #444;
     display: block;
-    font-size: 20px;
+    font-size: 14px;
     color: $compliment;
     font-weight: bold;
     line-height: 18px;
     letter-spacing: -0.05em;
+
+    @include media('<desktop') {
+      font-size: 16px;
+      flex: 0 0 45%;
+    }
   }
 }
 
@@ -79,6 +97,11 @@ body {
   max-width: 800px;
   background: #fff;
   color: #111;
+
+  @include media('<desktop') {
+    height: auto;
+    overflow: unset;
+  }
 }
 
 .resume-job {
@@ -116,6 +139,6 @@ body {
   padding: $size-3 $size-3 $size-3;
 
   a {
-    color: invert(skyblue);
+    color: invert($primary);
   }
 }
