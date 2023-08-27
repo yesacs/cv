@@ -1,0 +1,27 @@
+@import 'src/_mixins.scss';
+
+.resume-job {
+  flex: 0 0 100%;
+  font-family: Bitter;
+
+  &:not(:last-child) {
+    margin-bottom: $size-4;
+    padding-bottom: $size-4;
+    border-bottom: 1px solid #ccc;
+  }
+  .resume-job-title {
+    font-size: 24px;
+    line-height: 1em;
+    font-weight: bold;
+
+    small {
+      display: block;
+      font-size: 50%;
+    }
+  }
+
+  ul {
+    list-style: disc;
+    margin-left: 1rem;
+  }
+}

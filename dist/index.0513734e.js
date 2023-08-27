@@ -2805,15 +2805,15 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactDom = require("react-dom");
 var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
-var _get = require("lodash/get");
-var _getDefault = parcelHelpers.interopDefault(_get);
 var _resumeDataJs = require("./resumeData.js");
 var _resumeDataJsDefault = parcelHelpers.interopDefault(_resumeDataJs);
 var _header = require("./components/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
-var _appScss = require("./App.scss");
 var _skillBar = require("./components/SkillBar");
 var _skillBarDefault = parcelHelpers.interopDefault(_skillBar);
+var _job = require("./components/Job");
+var _jobDefault = parcelHelpers.interopDefault(_job);
+var _appScss = require("./App.scss");
 (0, _reactDomDefault.default).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
     className: "resume-container",
     children: [
@@ -2821,12 +2821,12 @@ var _skillBarDefault = parcelHelpers.interopDefault(_skillBar);
             className: "resume-header",
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 14,
+                lineNumber: 16,
                 columnNumber: 7
             }, undefined)
         }, void 0, false, {
             fileName: "src/App.tsx",
-            lineNumber: 13,
+            lineNumber: 15,
             columnNumber: 5
         }, undefined),
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -2839,77 +2839,39 @@ var _skillBarDefault = parcelHelpers.interopDefault(_skillBar);
                             strength: (0, _resumeDataJsDefault.default).skills[s]
                         }, s, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 21,
+                            lineNumber: 23,
                             columnNumber: 13
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 17,
+                    lineNumber: 19,
                     columnNumber: 7
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "resume-experience",
-                    children: (0, _resumeDataJsDefault.default).jobs.map((j, i)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "resume-job",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                                    className: "resume-job-title",
-                                    children: [
-                                        j.company,
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("small", {
-                                            children: [
-                                                j.title,
-                                                ", ",
-                                                j.duration.start,
-                                                "—",
-                                                j.duration.end
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "src/App.tsx",
-                                            lineNumber: 29,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/App.tsx",
-                                    lineNumber: 27,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                                    children: (0, _getDefault.default)(j, "duties", []).map((d, n)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                            children: d
-                                        }, n, false, {
-                                            fileName: "src/App.tsx",
-                                            lineNumber: 35,
-                                            columnNumber: 17
-                                        }, undefined))
-                                }, void 0, false, {
-                                    fileName: "src/App.tsx",
-                                    lineNumber: 33,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, i, true, {
+                    children: (0, _resumeDataJsDefault.default).jobs.map((j, i)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jobDefault.default), {
+                            job: j
+                        }, i, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 26,
+                            lineNumber: 28,
                             columnNumber: 11
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 24,
+                    lineNumber: 26,
                     columnNumber: 7
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/App.tsx",
-            lineNumber: 16,
+            lineNumber: 18,
             columnNumber: 5
         }, undefined),
-        false
+        ")}"
     ]
 }, void 0, true, {
     fileName: "src/App.tsx",
-    lineNumber: 12,
+    lineNumber: 14,
     columnNumber: 3
 }, undefined), window.document.querySelector("#app"), ()=>{});
 
@@ -2918,7 +2880,7 @@ var _skillBarDefault = parcelHelpers.interopDefault(_skillBar);
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","lodash/get":"8UELX","./resumeData.js":"2ZK3Z","./components/Header":"kkCkM","./App.scss":"c8Etz","./components/SkillBar":"bqoow","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","./resumeData.js":"2ZK3Z","./components/Header":"kkCkM","./App.scss":"c8Etz","./components/SkillBar":"bqoow","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Job":"3lAvk"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27082,7 +27044,764 @@ module.exports = require("ef03b89c8fe2794e");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"8UELX":[function(require,module,exports) {
+},{}],"2ZK3Z":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$86a9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$86a9.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+exports.default = {
+    name: "Casey Sullivan",
+    position: "Skilled UI/UX Developer",
+    location: "South Burlington, VT",
+    abstract: `I'm a UI/UX developer with nearly 20 years of professional success. I'm designer that sweats 
+             the small stuff. I like to take complex systems and make them easy and intuitive. I have had experiences 
+             with many different technologies and in several disparate industries.`,
+    personal: "I enjoy games, board more than video these days. I like death metal and pro wrestling. I love riding bikes. I share a home office with a corgi named Gabe. He likes cheese.",
+    email: "casey.sullivan@gmail.com",
+    repoUrl: "https://github.com/yesacs/resume",
+    education: {
+        degree: "B.S., Computer Science",
+        school: "Saint Michael's College",
+        location: {
+            city: "Colchester",
+            state: "VT"
+        },
+        duration: {
+            start: 2000,
+            end: 2004
+        }
+    },
+    jobs: [
+        {
+            title: "Head of Product Design",
+            company: "FRIKINtech",
+            industry: "Car Dealership Operations",
+            duration: {
+                start: 2018
+            },
+            location: {
+                city: "Williston",
+                state: "VT"
+            },
+            current: true,
+            duties: [
+                "Responsible for the design, development and maintence of illumiQUOTE, a system allowing car shoppers to generate penny-perfect payments including equity, fees, taxes and rebates using React/Redux/Sass",
+                "Designed and developed WEBSITEiQ, an embedded lightweight widget to automatically show car payments on dealer websites using vanilla JS/CSS",
+                "Designed email templates sent to customers on dealers' behalf to intice their service customers to shop with their equity",
+                "Wrote and maintained  scripts to enforce best practices with regard to build and deploy to AWS",
+                "Worked with OEMs to ensure brand compliance"
+            ]
+        },
+        {
+            title: "User Experience Developer",
+            company: "Pwnie Express",
+            industry: "Cyber Security",
+            location: {
+                city: "Burlingon",
+                state: "VT"
+            },
+            duration: {
+                start: 2015,
+                end: 2018
+            },
+            duties: [
+                "Primary UX designer of Pulse 2.0, a cloud-based dashboard used by security professionals to monitor threats on their corporate networks using React/Redux/Sass",
+                "Created exective reports designed to info C-Levels about threat severity and mitigation succes on their networks",
+                "Worked on embedded web UIs for admintration of Pwnie's physical sensor hardware",
+                "Maintained legacy Pulse, a previous version, using Ember.js ",
+                "Attended Black Hat/Defcon as a vendor to demo products"
+            ]
+        },
+        {
+            title: "User Interface Developer",
+            company: "Dealer.com",
+            industry: "Car Dealership Marketing and Ops",
+            location: {
+                city: "Burlingon",
+                state: "VT"
+            },
+            duration: {
+                start: 2010,
+                end: 2015
+            },
+            duties: [
+                "UI/UX developer and designer for CRM, Dealer.com's first dealer ops solution",
+                "Designed and developed the Dealer.com Pencil Tool, a realtime car payment engine",
+                "Developed embedable js apps designed to augment existing apps without backend integrations",
+                "Met with our dealership customers to demo beta features and collect feedback",
+                "Built internal CRM for in-house sales teams using Grails/jQuery"
+            ]
+        },
+        {
+            title: "Interactive Developer",
+            company: "Propeller Media Works",
+            industry: "Custom Website Design and Development",
+            location: {
+                city: "Burlingon",
+                state: "VT"
+            },
+            duration: {
+                start: 2009,
+                end: 2010
+            },
+            duties: [
+                "Worked with clients and designers to build and deploy custom websites using PHP and CSS",
+                "Implemented customized e-commerce solutions for clients to sell online using Magento",
+                "Built proof-of-concept next-gen CMS systems using Ruby on Rails"
+            ]
+        },
+        {
+            title: "Manager Software + Analytics",
+            company: "EpikOne",
+            industry: "Google Analytics Consulting and Marketing",
+            location: {
+                city: "Burlingon",
+                state: "VT"
+            },
+            duration: {
+                start: 2007,
+                end: 2009
+            },
+            duties: [
+                "Lead Ruby on Rails developer for one of the premier Google Analytics Authorized Consultancies",
+                "Led development of SiteScan, a tool to verofy corrent GA installation on websites",
+                "Led development of AnalyticsView, a pre-GA api data aggregator and report generator",
+                "Led development of DigitalMIDI, a marketing communications dashboard for enterprise",
+                "Extensive development using the Google Analytics API"
+            ]
+        },
+        {
+            title: "HTML Production",
+            company: "Bluehouse Group",
+            location: {
+                city: "Richmond",
+                state: "VT"
+            },
+            duration: {
+                start: 2005,
+                end: 2007
+            },
+            duties: [
+                "Developer of standards-based HTML and CSS, and PHP sites ranging from simple brochure sites to high-end e-commerce",
+                "Web site production, development, and maintenance of over 30 sites",
+                "Translation of designs from Photoshop into HTML and CSS",
+                "Research of new technologies for use on future projects, such as Ajax and Ruby on Rails",
+                "Helped develop Content Creator, a CMS system for sites that allows clients to build out the content of a site themselves"
+            ]
+        }
+    ],
+    skills: {
+        React: 10,
+        Redux: 9,
+        jQuery: 10,
+        Knockout: 10,
+        Parcel: 9,
+        Lodash: 10,
+        CommonJS: 8,
+        Jest: 7,
+        HTML: 10,
+        CSS3: 10,
+        "Scss/Sass": 9,
+        PHP: 6,
+        HTMX: 7,
+        Clojure: 5,
+        "Responsive Design": 8,
+        "Mobile-First Design": 8,
+        "Scrum Agile/SAFe": 7
+    }
+};
+
+  $parcel$ReactRefreshHelpers$86a9.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"km3Ru":[function(require,module,exports) {
+"use strict";
+var Refresh = require("7422ead32dcc1e6b");
+function debounce(func, delay) {
+    {
+        let timeout = undefined;
+        let lastTime = 0;
+        return function(args) {
+            // Call immediately if last call was more than the delay ago.
+            // Otherwise, set a timeout. This means the first call is fast
+            // (for the common case of a single update), and subsequent updates
+            // are batched.
+            let now = Date.now();
+            if (now - lastTime > delay) {
+                lastTime = now;
+                func.call(null, args);
+            } else {
+                clearTimeout(timeout);
+                timeout = setTimeout(function() {
+                    timeout = undefined;
+                    lastTime = Date.now();
+                    func.call(null, args);
+                }, delay);
+            }
+        };
+    }
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30);
+// Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module1) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module1.id + " " + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module1) {
+    if (isReactRefreshBoundary(module1.exports)) {
+        registerExportsForReactRefresh(module1);
+        if (module1.hot) {
+            module1.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module1.exports;
+            });
+            module1.hot.accept(function(getParents) {
+                var prevExports = module1.hot.data.prevExports;
+                var nextExports = module1.exports;
+                // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
+                // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+}
+// When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module1) {
+    var exports = module1.exports, id = module1.id;
+    Refresh.register(exports, id + " %exports%");
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        var typeID = id + " %exports% " + key;
+        Refresh.register(exportValue, typeID);
+    }
+}
+
+},{"7422ead32dcc1e6b":"786KC"}],"kkCkM":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$a66a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$a66a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Header", ()=>Header);
+parcelHelpers.export(exports, "default", ()=>function() {
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {
+            ...(0, _resumeDataJsDefault.default)
+        }, void 0, false, {
+            fileName: "src/components/Header/index.tsx",
+            lineNumber: 25,
+            columnNumber: 10
+        }, this);
+    });
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _resumeDataJs = require("~/src/resumeData.js");
+var _resumeDataJsDefault = parcelHelpers.interopDefault(_resumeDataJs);
+var _footer = require("~/src/components/Footer");
+var _footerDefault = parcelHelpers.interopDefault(_footer);
+var _indexScss = require("./index.scss");
+const Header = ({ name, position, location })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
+        className: "resume-header-wrapper",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: name
+                    }, void 0, false, {
+                        fileName: "src/components/Header/index.tsx",
+                        lineNumber: 12,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        children: position
+                    }, void 0, false, {
+                        fileName: "src/components/Header/index.tsx",
+                        lineNumber: 13,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        children: location
+                    }, void 0, false, {
+                        fileName: "src/components/Header/index.tsx",
+                        lineNumber: 14,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: (0, _resumeDataJsDefault.default).abstract
+                    }, void 0, false, {
+                        fileName: "src/components/Header/index.tsx",
+                        lineNumber: 15,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: (0, _resumeDataJsDefault.default).personal
+                    }, void 0, false, {
+                        fileName: "src/components/Header/index.tsx",
+                        lineNumber: 16,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Header/index.tsx",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
+                fileName: "src/components/Header/index.tsx",
+                lineNumber: 19,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Header/index.tsx",
+        lineNumber: 10,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Header;
+var _c;
+$RefreshReg$(_c, "Header");
+
+  $parcel$ReactRefreshHelpers$a66a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./index.scss":"gmN72","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/resumeData.js":"2ZK3Z","~/src/components/Footer":"51Ov9"}],"gmN72":[function() {},{}],"51Ov9":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$38b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$38b2.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Footer", ()=>Footer);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _indexScss = require("./index.scss");
+function Footer() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "resume-footer",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                className: "fa-fw fa-solid fa-print"
+                            }, void 0, false, {
+                                fileName: "src/components/Footer/index.tsx",
+                                lineNumber: 11,
+                                columnNumber: 13
+                            }, this),
+                            " Print…"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Footer/index.tsx",
+                        lineNumber: 10,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/Footer/index.tsx",
+                    lineNumber: 9,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                className: "fa-fw fa-solid fa-envelope"
+                            }, void 0, false, {
+                                fileName: "src/components/Footer/index.tsx",
+                                lineNumber: 16,
+                                columnNumber: 13
+                            }, this),
+                            " ",
+                            "casey.sullivan@gmail.com"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Footer/index.tsx",
+                        lineNumber: 15,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/Footer/index.tsx",
+                    lineNumber: 14,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                className: "fa-fw fa-brands fa-twitter"
+                            }, void 0, false, {
+                                fileName: "src/components/Footer/index.tsx",
+                                lineNumber: 22,
+                                columnNumber: 13
+                            }, this),
+                            " caseysullivan"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Footer/index.tsx",
+                        lineNumber: 21,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/Footer/index.tsx",
+                    lineNumber: 20,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                className: "fa-fw fa-brands fa-linkedin"
+                            }, void 0, false, {
+                                fileName: "src/components/Footer/index.tsx",
+                                lineNumber: 27,
+                                columnNumber: 13
+                            }, this),
+                            " caseypsullivan"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Footer/index.tsx",
+                        lineNumber: 26,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/Footer/index.tsx",
+                    lineNumber: 25,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                className: "fa-fw fa-brands fa-github"
+                            }, void 0, false, {
+                                fileName: "src/components/Footer/index.tsx",
+                                lineNumber: 32,
+                                columnNumber: 13
+                            }, this),
+                            " yesacs"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Footer/index.tsx",
+                        lineNumber: 31,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/Footer/index.tsx",
+                    lineNumber: 30,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                className: "fa-fw fa-solid fa-pizza-slice"
+                            }, void 0, false, {
+                                fileName: "src/components/Footer/index.tsx",
+                                lineNumber: 37,
+                                columnNumber: 13
+                            }, this),
+                            " casey.pizza"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Footer/index.tsx",
+                        lineNumber: 36,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/Footer/index.tsx",
+                    lineNumber: 35,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Footer/index.tsx",
+            lineNumber: 8,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/Footer/index.tsx",
+        lineNumber: 7,
+        columnNumber: 5
+    }, this);
+}
+_c = Footer;
+exports.default = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$38b2.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./index.scss":"bcRY6"}],"bcRY6":[function() {},{}],"c8Etz":[function() {},{}],"bqoow":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f893 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f893.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _indexScss = require("./index.scss");
+var _s = $RefreshSig$();
+function SkillBar(props) {
+    _s();
+    let { skill: s, strength: v } = props, [rendered, setRendered] = (0, _react.useState)(false), barWidth = (rendered ? v : 0) / 10 * 100;
+    (0, _react.useEffect)(()=>{
+        setTimeout(()=>setRendered(true), 500);
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "skill-bar-wrapper",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "skill-name",
+                children: s
+            }, void 0, false, {
+                fileName: "src/components/SkillBar/index.tsx",
+                lineNumber: 16,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "skill-bar",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "skill-bar-inner",
+                    style: {
+                        width: `${barWidth}%`
+                    }
+                }, void 0, false, {
+                    fileName: "src/components/SkillBar/index.tsx",
+                    lineNumber: 18,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/SkillBar/index.tsx",
+                lineNumber: 17,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/SkillBar/index.tsx",
+        lineNumber: 15,
+        columnNumber: 5
+    }, this);
+}
+_s(SkillBar, "kzTmK+RaULWy0tsjSu4ZEmjPuxM=");
+_c = SkillBar;
+exports.default = SkillBar;
+var _c;
+$RefreshReg$(_c, "SkillBar");
+
+  $parcel$ReactRefreshHelpers$f893.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./index.scss":"8O0B2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8O0B2":[function() {},{}],"3lAvk":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ee23 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ee23.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Job", ()=>Job);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _get = require("lodash/get");
+var _getDefault = parcelHelpers.interopDefault(_get);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _indexScss = require("./index.scss");
+function Job(props) {
+    let { job, className } = props;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: (0, _classnamesDefault.default)("resume-job", className),
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                className: "resume-job-title",
+                children: [
+                    job.company,
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("small", {
+                        children: [
+                            job.title,
+                            ", ",
+                            job.duration.start,
+                            "—",
+                            job.duration.end
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Job/index.tsx",
+                        lineNumber: 26,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Job/index.tsx",
+                lineNumber: 24,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                children: (0, _getDefault.default)(job, "duties", []).map((d, n)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: d
+                    }, n, false, {
+                        fileName: "src/components/Job/index.tsx",
+                        lineNumber: 32,
+                        columnNumber: 11
+                    }, this))
+            }, void 0, false, {
+                fileName: "src/components/Job/index.tsx",
+                lineNumber: 30,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Job/index.tsx",
+        lineNumber: 23,
+        columnNumber: 5
+    }, this);
+}
+_c = Job;
+exports.default = Job;
+var _c;
+$RefreshReg$(_c, "Job");
+
+  $parcel$ReactRefreshHelpers$ee23.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","lodash/get":"8UELX","classnames":"jocGM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./index.scss":"4B8tx"}],"8UELX":[function(require,module,exports) {
 var baseGet = require("446ba3c1be7939a3");
 /**
  * Gets the value at `path` of `object`. If the resolved value is
@@ -28097,689 +28816,47 @@ var isSymbol = require("2aed9f6fd4b7386");
 }
 module.exports = toKey;
 
-},{"2aed9f6fd4b7386":"i3BHC"}],"2ZK3Z":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$86a9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$86a9.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-exports.default = {
-    name: "Casey Sullivan",
-    position: "Skilled UI/UX Developer",
-    location: "South Burlington, VT",
-    abstract: `I'm a UI/UX developer with nearly 20 years of professional success. I'm designer that sweats 
-             the small stuff. I like to take complex systems and make them easy and intuitive. I have had experiences 
-             with many different technologies and in several disparate industries.`,
-    personal: "I enjoy games, board more than video these days. I like death metal and pro wrestling. I love riding bikes. I share a home office with a corgi named Gabe. He likes cheese.",
-    email: "casey.sullivan@gmail.com",
-    repoUrl: "https://github.com/yesacs/resume",
-    education: {
-        degree: "B.S., Computer Science",
-        school: "Saint Michael's College",
-        location: {
-            city: "Colchester",
-            state: "VT"
-        },
-        duration: {
-            start: 2000,
-            end: 2004
-        }
-    },
-    jobs: [
-        {
-            title: "Head of Product Design",
-            company: "FRIKINtech",
-            industry: "Car Dealership Operations",
-            duration: {
-                start: 2018
-            },
-            location: {
-                city: "Williston",
-                state: "VT"
-            },
-            current: true,
-            duties: [
-                "Responsible for the design, development and maintence of illumiQUOTE, a system allowing car shoppers to generate penny-perfect payments including equity, fees, taxes and rebates using React/Redux/Sass",
-                "Designed and developed WEBSITEiQ, an embedded lightweight widget to automatically show car payments on dealer websites using vanilla JS/CSS",
-                "Designed email templates sent to customers on dealers' behalf to intice their service customers to shop with their equity",
-                "Wrote and maintained  scripts to enforce best practices with regard to build and deploy to AWS",
-                "Worked with OEMs to ensure brand compliance"
-            ]
-        },
-        {
-            title: "User Experience Developer",
-            company: "Pwnie Express",
-            industry: "Cyber Security",
-            location: {
-                city: "Burlingon",
-                state: "VT"
-            },
-            duration: {
-                start: 2015,
-                end: 2018
-            },
-            duties: [
-                "Primary UX designer of Pulse 2.0, a cloud-based dashboard used by security professionals to monitor threats on their corporate networks using React/Redux/Sass",
-                "Created exective reports designed to info C-Levels about threat severity and mitigation succes on their networks",
-                "Worked on embedded web UIs for admintration of Pwnie's physical sensor hardware",
-                "Maintained legacy Pulse, a previous version, using Ember.js ",
-                "Attended Black Hat/Defcon as a vendor to demo products"
-            ]
-        },
-        {
-            title: "User Interface Developer",
-            company: "Dealer.com",
-            industry: "Car Dealership Marketing and Ops",
-            location: {
-                city: "Burlingon",
-                state: "VT"
-            },
-            duration: {
-                start: 2010,
-                end: 2015
-            },
-            duties: [
-                "UI/UX developer and designer for CRM, Dealer.com's first dealer ops solution",
-                "Designed and developed the Dealer.com Pencil Tool, a realtime car payment engine",
-                "Developed embedable js apps designed to augment existing apps without backend integrations",
-                "Met with our dealership customers to demo beta features and collect feedback",
-                "Built internal CRM for in-house sales teams using Grails/jQuery"
-            ]
-        },
-        {
-            title: "Interactive Developer",
-            company: "Propeller Media Works",
-            industry: "Custom Website Design and Development",
-            location: {
-                city: "Burlingon",
-                state: "VT"
-            },
-            duration: {
-                start: 2009,
-                end: 2010
-            },
-            duties: [
-                "Worked with clients and designers to build and deploy custom websites using PHP and CSS",
-                "Implemented customized e-commerce solutions for clients to sell online using Magento",
-                "Built proof-of-concept next-gen CMS systems using Ruby on Rails"
-            ]
-        },
-        {
-            title: "Manager Software + Analytics",
-            company: "EpikOne",
-            industry: "Google Analytics Consulting and Marketing",
-            location: {
-                city: "Burlingon",
-                state: "VT"
-            },
-            duration: {
-                start: 2007,
-                end: 2009
-            },
-            duties: [
-                "Lead Ruby on Rails developer for one of the premier Google Analytics Authorized Consultancies",
-                "Led development of SiteScan, a tool to verofy corrent GA installation on websites",
-                "Led development of AnalyticsView, a pre-GA api data aggregator and report generator",
-                "Led development of DigitalMIDI, a marketing communications dashboard for enterprise",
-                "Extensive development using the Google Analytics API"
-            ]
-        },
-        {
-            title: "HTML Production",
-            company: "Bluehouse Group",
-            location: {
-                city: "Richmond",
-                state: "VT"
-            },
-            duration: {
-                start: 2005,
-                end: 2007
-            },
-            duties: [
-                "Developer of standards-based HTML and CSS, and PHP sites ranging from simple brochure sites to high-end e-commerce",
-                "Web site production, development, and maintenance of over 30 sites",
-                "Translation of designs from Photoshop into HTML and CSS",
-                "Research of new technologies for use on future projects, such as Ajax and Ruby on Rails",
-                "Helped develop Content Creator, a CMS system for sites that allows clients to build out the content of a site themselves"
-            ]
-        }
-    ],
-    skills: {
-        React: 10,
-        Redux: 9,
-        jQuery: 10,
-        Knockout: 10,
-        Parcel: 9,
-        Lodash: 10,
-        CommonJS: 8,
-        Jest: 7,
-        HTML: 10,
-        CSS3: 10,
-        "Scss/Sass": 9,
-        PHP: 6,
-        HTMX: 7,
-        Clojure: 5,
-        "Responsive Design": 8,
-        "Mobile-First Design": 8,
-        "Scrum Agile/SAFe": 7
-    }
-};
-
-  $parcel$ReactRefreshHelpers$86a9.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"km3Ru":[function(require,module,exports) {
-"use strict";
-var Refresh = require("7422ead32dcc1e6b");
-function debounce(func, delay) {
-    {
-        let timeout = undefined;
-        let lastTime = 0;
-        return function(args) {
-            // Call immediately if last call was more than the delay ago.
-            // Otherwise, set a timeout. This means the first call is fast
-            // (for the common case of a single update), and subsequent updates
-            // are batched.
-            let now = Date.now();
-            if (now - lastTime > delay) {
-                lastTime = now;
-                func.call(null, args);
-            } else {
-                clearTimeout(timeout);
-                timeout = setTimeout(function() {
-                    timeout = undefined;
-                    lastTime = Date.now();
-                    func.call(null, args);
-                }, delay);
-            }
-        };
-    }
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30);
-// Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module1) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module1.id + " " + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module1) {
-    if (isReactRefreshBoundary(module1.exports)) {
-        registerExportsForReactRefresh(module1);
-        if (module1.hot) {
-            module1.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module1.exports;
-            });
-            module1.hot.accept(function(getParents) {
-                var prevExports = module1.hot.data.prevExports;
-                var nextExports = module1.exports;
-                // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
-                // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
+},{"2aed9f6fd4b7386":"i3BHC"}],"jocGM":[function(require,module,exports) {
+/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/ /* global define */ (function() {
+    "use strict";
+    var hasOwn = {}.hasOwnProperty;
+    var nativeCodeString = "[native code]";
+    function classNames() {
+        var classes = [];
+        for(var i = 0; i < arguments.length; i++){
+            var arg = arguments[i];
+            if (!arg) continue;
+            var argType = typeof arg;
+            if (argType === "string" || argType === "number") classes.push(arg);
+            else if (Array.isArray(arg)) {
+                if (arg.length) {
+                    var inner = classNames.apply(null, arg);
+                    if (inner) classes.push(inner);
                 }
-                enqueueUpdate();
-            });
+            } else if (argType === "object") {
+                if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes("[native code]")) {
+                    classes.push(arg.toString());
+                    continue;
+                }
+                for(var key in arg)if (hasOwn.call(arg, key) && arg[key]) classes.push(key);
+            }
         }
+        return classes.join(" ");
     }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-}
-// When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module1) {
-    var exports = module1.exports, id = module1.id;
-    Refresh.register(exports, id + " %exports%");
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        var typeID = id + " %exports% " + key;
-        Refresh.register(exportValue, typeID);
-    }
-}
-
-},{"7422ead32dcc1e6b":"786KC"}],"kkCkM":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$a66a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$a66a.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Header", ()=>Header);
-parcelHelpers.export(exports, "default", ()=>function() {
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {
-            ...(0, _resumeDataJsDefault.default)
-        }, void 0, false, {
-            fileName: "src/components/Header/index.tsx",
-            lineNumber: 58,
-            columnNumber: 10
-        }, this);
+    if (0, module.exports) {
+        classNames.default = classNames;
+        module.exports = classNames;
+    } else if (typeof define === "function" && typeof define.amd === "object" && define.amd) // register as 'classnames', consistent with npm package name
+    define("classnames", [], function() {
+        return classNames;
     });
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _resumeDataJs = require("../../../src/resumeData.js");
-var _resumeDataJsDefault = parcelHelpers.interopDefault(_resumeDataJs);
-var _indexScss = require("./index.scss");
-const Header = ({ name, position, location })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
-        className: "resume-header-wrapper",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        children: name
-                    }, void 0, false, {
-                        fileName: "src/components/Header/index.tsx",
-                        lineNumber: 10,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        children: position
-                    }, void 0, false, {
-                        fileName: "src/components/Header/index.tsx",
-                        lineNumber: 11,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        children: location
-                    }, void 0, false, {
-                        fileName: "src/components/Header/index.tsx",
-                        lineNumber: 12,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: (0, _resumeDataJsDefault.default).abstract
-                    }, void 0, false, {
-                        fileName: "src/components/Header/index.tsx",
-                        lineNumber: 13,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: (0, _resumeDataJsDefault.default).personal
-                    }, void 0, false, {
-                        fileName: "src/components/Header/index.tsx",
-                        lineNumber: 14,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Header/index.tsx",
-                lineNumber: 9,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                    className: "fa-fw fa-solid fa-print"
-                                }, void 0, false, {
-                                    fileName: "src/components/Header/index.tsx",
-                                    lineNumber: 20,
-                                    columnNumber: 13
-                                }, undefined),
-                                " ",
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    children: "Print…"
-                                }, void 0, false, {
-                                    fileName: "src/components/Header/index.tsx",
-                                    lineNumber: 20,
-                                    columnNumber: 55
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/Header/index.tsx",
-                            lineNumber: 19,
-                            columnNumber: 11
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/Header/index.tsx",
-                        lineNumber: 18,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                    className: "fa-fw fa-solid fa-envelope"
-                                }, void 0, false, {
-                                    fileName: "src/components/Header/index.tsx",
-                                    lineNumber: 25,
-                                    columnNumber: 13
-                                }, undefined),
-                                " ",
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    children: "Email…"
-                                }, void 0, false, {
-                                    fileName: "src/components/Header/index.tsx",
-                                    lineNumber: 26,
-                                    columnNumber: 13
-                                }, undefined),
-                                " "
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/Header/index.tsx",
-                            lineNumber: 24,
-                            columnNumber: 11
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/Header/index.tsx",
-                        lineNumber: 23,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                    className: "fa-fw fa-brands fa-twitter"
-                                }, void 0, false, {
-                                    fileName: "src/components/Header/index.tsx",
-                                    lineNumber: 31,
-                                    columnNumber: 13
-                                }, undefined),
-                                " ",
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    children: "caseysullivan"
-                                }, void 0, false, {
-                                    fileName: "src/components/Header/index.tsx",
-                                    lineNumber: 32,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/Header/index.tsx",
-                            lineNumber: 30,
-                            columnNumber: 11
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/Header/index.tsx",
-                        lineNumber: 29,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                    className: "fa-fw fa-brands fa-linkedin"
-                                }, void 0, false, {
-                                    fileName: "src/components/Header/index.tsx",
-                                    lineNumber: 37,
-                                    columnNumber: 13
-                                }, undefined),
-                                " ",
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    children: "caseypsullivan"
-                                }, void 0, false, {
-                                    fileName: "src/components/Header/index.tsx",
-                                    lineNumber: 38,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/Header/index.tsx",
-                            lineNumber: 36,
-                            columnNumber: 11
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/Header/index.tsx",
-                        lineNumber: 35,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                    className: "fa-fw fa-brands fa-github"
-                                }, void 0, false, {
-                                    fileName: "src/components/Header/index.tsx",
-                                    lineNumber: 43,
-                                    columnNumber: 13
-                                }, undefined),
-                                " ",
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    children: "yesacs"
-                                }, void 0, false, {
-                                    fileName: "src/components/Header/index.tsx",
-                                    lineNumber: 43,
-                                    columnNumber: 57
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/Header/index.tsx",
-                            lineNumber: 42,
-                            columnNumber: 11
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/Header/index.tsx",
-                        lineNumber: 41,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                    className: "fa-fw fa-solid fa-pizza-slice"
-                                }, void 0, false, {
-                                    fileName: "src/components/Header/index.tsx",
-                                    lineNumber: 48,
-                                    columnNumber: 13
-                                }, undefined),
-                                " ",
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    children: "casey.pizza"
-                                }, void 0, false, {
-                                    fileName: "src/components/Header/index.tsx",
-                                    lineNumber: 49,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/Header/index.tsx",
-                            lineNumber: 47,
-                            columnNumber: 11
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/Header/index.tsx",
-                        lineNumber: 46,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Header/index.tsx",
-                lineNumber: 17,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Header/index.tsx",
-        lineNumber: 8,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Header;
-var _c;
-$RefreshReg$(_c, "Header");
+    else window.classNames = classNames;
+})();
 
-  $parcel$ReactRefreshHelpers$a66a.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../../src/resumeData.js":"2ZK3Z","./index.scss":"gmN72","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gmN72":[function() {},{}],"c8Etz":[function() {},{}],"bqoow":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$f893 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$f893.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _indexScss = require("./index.scss");
-var _s = $RefreshSig$();
-function SkillBar(props) {
-    _s();
-    let { skill: s, strength: v } = props, [rendered, setRendered] = (0, _react.useState)(false), barWidth = (rendered ? v : 0) / 10 * 100;
-    (0, _react.useEffect)(()=>{
-        setTimeout(()=>setRendered(true), 500);
-    }, []);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "skill-bar-wrapper",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                className: "skill-name",
-                children: s
-            }, void 0, false, {
-                fileName: "src/components/SkillBar/index.tsx",
-                lineNumber: 16,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "skill-bar",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "skill-bar-inner",
-                    style: {
-                        width: `${barWidth}%`
-                    }
-                }, void 0, false, {
-                    fileName: "src/components/SkillBar/index.tsx",
-                    lineNumber: 18,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/SkillBar/index.tsx",
-                lineNumber: 17,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/SkillBar/index.tsx",
-        lineNumber: 15,
-        columnNumber: 5
-    }, this);
-}
-_s(SkillBar, "kzTmK+RaULWy0tsjSu4ZEmjPuxM=");
-_c = SkillBar;
-exports.default = SkillBar;
-var _c;
-$RefreshReg$(_c, "SkillBar");
-
-  $parcel$ReactRefreshHelpers$f893.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./index.scss":"8O0B2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8O0B2":[function() {},{}]},["79kPs","1xC6H","7F5Te"], "7F5Te", "parcelRequiref94e")
+},{}],"4B8tx":[function() {},{}]},["79kPs","1xC6H","7F5Te"], "7F5Te", "parcelRequiref94e")
 
 //# sourceMappingURL=index.0513734e.js.map

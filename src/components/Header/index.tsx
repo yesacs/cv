@@ -1,5 +1,7 @@
 import React from 'react'
-import resume from '../../../src/resumeData.js'
+import resume from '~/src/resumeData.js'
+
+import Footer from '~/src/components/Footer'
 
 import './index.scss'
 
@@ -14,42 +16,7 @@ export const Header = ({ name, position, location }) => {
         <p>{resume.personal}</p>
       </div>
 
-      <ul>
-        <li>
-          <a>
-            <i className="fa-fw fa-solid fa-print" /> <span>Print&hellip;</span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <i className="fa-fw fa-solid fa-envelope" />{' '}
-            <span>Email&hellip;</span>{' '}
-          </a>
-        </li>
-        <li>
-          <a>
-            <i className="fa-fw fa-brands fa-twitter" />{' '}
-            <span>caseysullivan</span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <i className="fa-fw fa-brands fa-linkedin" />{' '}
-            <span>caseypsullivan</span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <i className="fa-fw fa-brands fa-github" /> <span>yesacs</span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <i className="fa-fw fa-solid fa-pizza-slice" />{' '}
-            <span>casey.pizza</span>
-          </a>
-        </li>
-      </ul>
+      <Footer />
     </header>
   )
 }

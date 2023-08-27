@@ -1,0 +1,9 @@
+@import 'src/_mixins.scss';
+
+.resume-footer {
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}

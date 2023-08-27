@@ -34,6 +34,7 @@
   "dependencies": {
     "@tsconfig/node18": "^18.2.0",
     "bulma": "^0.9.4",
+    "classnames": "^2.3.2",
     "include-media": "^2.0.0",
     "lodash": "latest"
   }
