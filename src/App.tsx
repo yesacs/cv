@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import * as ReactDOM from 'react-dom/client'
 
 import resume from './resumeData.js'
 
@@ -9,7 +9,9 @@ import Job from './components/Job'
 
 import './App.scss'
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(window.document.querySelector('#app'))
+
+root.render(
   <div className="resume-container">
     <div className="resume-header">
       <Header {...resume} />
@@ -28,7 +30,5 @@ ReactDOM.render(
         ))}
       </div>
     </div>
-  </div>,
-  window.document.querySelector('#app'),
-  () => {}
+  </div>
 )
