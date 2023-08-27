@@ -3,6 +3,11 @@
   "compilerOptions": {
     "preserveConstEnums": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["**/*.spec.ts"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "**/*.spec.ts"
+  ],
+  "jsx": "React"
 }

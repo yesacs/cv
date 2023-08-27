@@ -17,7 +17,7 @@ interface JobProps {
 }
 
 export function Job(props: JobProps) {
-  let { job, className } = props
+  const { job, className } = props
 
   return (
     <div className={c('resume-job', className)}>
@@ -28,7 +28,7 @@ export function Job(props: JobProps) {
         </small>
       </h4>
       <ul>
-        {get(job, 'duties', []).map((d: string, n: any) => (
+        {get(job, 'duties', []).map((d: string, n: number) => (
           <li key={n}>{d}</li>
         ))}
       </ul>

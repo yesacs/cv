@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import get from 'lodash/get'
 
 import resume from './resumeData.js'
 
@@ -13,7 +12,7 @@ import './App.scss'
 ReactDOM.render(
   <div className="resume-container">
     <div className="resume-header">
-      <Header />
+      <Header {...resume} />
     </div>
     <div className="resume-main">
       <div className="resume-skills">
@@ -29,8 +28,7 @@ ReactDOM.render(
         ))}
       </div>
     </div>
-    )}
   </div>,
   window.document.querySelector('#app'),
-  () => { }
+  () => {}
 )

@@ -2819,14 +2819,16 @@ var _appScss = require("./App.scss");
     children: [
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "resume-header",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {
+                ...(0, _resumeDataJsDefault.default)
+            }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 16,
+                lineNumber: 15,
                 columnNumber: 7
             }, undefined)
         }, void 0, false, {
             fileName: "src/App.tsx",
-            lineNumber: 15,
+            lineNumber: 14,
             columnNumber: 5
         }, undefined),
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -2839,12 +2841,12 @@ var _appScss = require("./App.scss");
                             strength: (0, _resumeDataJsDefault.default).skills[s]
                         }, s, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 23,
+                            lineNumber: 22,
                             columnNumber: 13
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 19,
+                    lineNumber: 18,
                     columnNumber: 7
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -2853,25 +2855,24 @@ var _appScss = require("./App.scss");
                             job: j
                         }, i, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 28,
+                            lineNumber: 27,
                             columnNumber: 11
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 26,
+                    lineNumber: 25,
                     columnNumber: 7
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/App.tsx",
-            lineNumber: 18,
+            lineNumber: 17,
             columnNumber: 5
-        }, undefined),
-        ")}"
+        }, undefined)
     ]
 }, void 0, true, {
     fileName: "src/App.tsx",
-    lineNumber: 14,
+    lineNumber: 13,
     columnNumber: 3
 }, undefined), window.document.querySelector("#app"), ()=>{});
 
@@ -2880,7 +2881,7 @@ var _appScss = require("./App.scss");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","./resumeData.js":"2ZK3Z","./components/Header":"kkCkM","./App.scss":"c8Etz","./components/SkillBar":"bqoow","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Job":"3lAvk"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","./resumeData.js":"2ZK3Z","./components/Header":"kkCkM","./App.scss":"c8Etz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Job":"3lAvk","./components/SkillBar":"bqoow"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27400,24 +27401,14 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Header", ()=>Header);
-parcelHelpers.export(exports, "default", ()=>function() {
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {
-            ...(0, _resumeDataJsDefault.default)
-        }, void 0, false, {
-            fileName: "src/components/Header/index.tsx",
-            lineNumber: 25,
-            columnNumber: 10
-        }, this);
-    });
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _resumeDataJs = require("~/src/resumeData.js");
-var _resumeDataJsDefault = parcelHelpers.interopDefault(_resumeDataJs);
 var _footer = require("~/src/components/Footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
 var _indexScss = require("./index.scss");
-const Header = ({ name, position, location })=>{
+const Header = (props)=>{
+    let { name, position, location, abstract, personal } = props;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
         className: "resume-header-wrapper",
         children: [
@@ -27427,56 +27418,57 @@ const Header = ({ name, position, location })=>{
                         children: name
                     }, void 0, false, {
                         fileName: "src/components/Header/index.tsx",
-                        lineNumber: 12,
+                        lineNumber: 21,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         children: position
                     }, void 0, false, {
                         fileName: "src/components/Header/index.tsx",
-                        lineNumber: 13,
+                        lineNumber: 22,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         children: location
                     }, void 0, false, {
                         fileName: "src/components/Header/index.tsx",
-                        lineNumber: 14,
+                        lineNumber: 23,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: (0, _resumeDataJsDefault.default).abstract
+                        children: abstract
                     }, void 0, false, {
                         fileName: "src/components/Header/index.tsx",
-                        lineNumber: 15,
+                        lineNumber: 24,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: (0, _resumeDataJsDefault.default).personal
+                        children: personal
                     }, void 0, false, {
                         fileName: "src/components/Header/index.tsx",
-                        lineNumber: 16,
+                        lineNumber: 25,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Header/index.tsx",
-                lineNumber: 11,
+                lineNumber: 20,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/components/Header/index.tsx",
-                lineNumber: 19,
+                lineNumber: 28,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header/index.tsx",
-        lineNumber: 10,
+        lineNumber: 19,
         columnNumber: 5
     }, undefined);
 };
 _c = Header;
+exports.default = Header;
 var _c;
 $RefreshReg$(_c, "Header");
 
@@ -27485,7 +27477,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./index.scss":"gmN72","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/resumeData.js":"2ZK3Z","~/src/components/Footer":"51Ov9"}],"gmN72":[function() {},{}],"51Ov9":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./index.scss":"gmN72","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/components/Footer":"51Ov9"}],"gmN72":[function() {},{}],"51Ov9":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$38b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27659,73 +27651,7 @@ $RefreshReg$(_c, "Footer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./index.scss":"bcRY6"}],"bcRY6":[function() {},{}],"c8Etz":[function() {},{}],"bqoow":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$f893 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$f893.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _indexScss = require("./index.scss");
-var _s = $RefreshSig$();
-function SkillBar(props) {
-    _s();
-    let { skill: s, strength: v } = props, [rendered, setRendered] = (0, _react.useState)(false), barWidth = (rendered ? v : 0) / 10 * 100;
-    (0, _react.useEffect)(()=>{
-        setTimeout(()=>setRendered(true), 500);
-    }, []);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "skill-bar-wrapper",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                className: "skill-name",
-                children: s
-            }, void 0, false, {
-                fileName: "src/components/SkillBar/index.tsx",
-                lineNumber: 16,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "skill-bar",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "skill-bar-inner",
-                    style: {
-                        width: `${barWidth}%`
-                    }
-                }, void 0, false, {
-                    fileName: "src/components/SkillBar/index.tsx",
-                    lineNumber: 18,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/SkillBar/index.tsx",
-                lineNumber: 17,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/SkillBar/index.tsx",
-        lineNumber: 15,
-        columnNumber: 5
-    }, this);
-}
-_s(SkillBar, "kzTmK+RaULWy0tsjSu4ZEmjPuxM=");
-_c = SkillBar;
-exports.default = SkillBar;
-var _c;
-$RefreshReg$(_c, "SkillBar");
-
-  $parcel$ReactRefreshHelpers$f893.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./index.scss":"8O0B2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8O0B2":[function() {},{}],"3lAvk":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./index.scss":"bcRY6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bcRY6":[function() {},{}],"c8Etz":[function() {},{}],"3lAvk":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ee23 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27744,7 +27670,7 @@ var _classnames = require("classnames");
 var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
 var _indexScss = require("./index.scss");
 function Job(props) {
-    let { job, className } = props;
+    const { job, className } = props;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: (0, _classnamesDefault.default)("resume-job", className),
         children: [
@@ -28857,6 +28783,72 @@ module.exports = toKey;
     else window.classNames = classNames;
 })();
 
-},{}],"4B8tx":[function() {},{}]},["79kPs","1xC6H","7F5Te"], "7F5Te", "parcelRequiref94e")
+},{}],"4B8tx":[function() {},{}],"bqoow":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f893 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f893.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _indexScss = require("./index.scss");
+var _s = $RefreshSig$();
+function SkillBar(props) {
+    _s();
+    let { skill: s, strength: v } = props, [rendered, setRendered] = (0, _react.useState)(false), barWidth = (rendered ? v : 0) / 10 * 100;
+    (0, _react.useEffect)(()=>{
+        setTimeout(()=>setRendered(true), 500);
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "skill-bar-wrapper",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "skill-name",
+                children: s
+            }, void 0, false, {
+                fileName: "src/components/SkillBar/index.tsx",
+                lineNumber: 16,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "skill-bar",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "skill-bar-inner",
+                    style: {
+                        width: `${barWidth}%`
+                    }
+                }, void 0, false, {
+                    fileName: "src/components/SkillBar/index.tsx",
+                    lineNumber: 18,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/SkillBar/index.tsx",
+                lineNumber: 17,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/SkillBar/index.tsx",
+        lineNumber: 15,
+        columnNumber: 5
+    }, this);
+}
+_s(SkillBar, "kzTmK+RaULWy0tsjSu4ZEmjPuxM=");
+_c = SkillBar;
+exports.default = SkillBar;
+var _c;
+$RefreshReg$(_c, "SkillBar");
+
+  $parcel$ReactRefreshHelpers$f893.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./index.scss":"8O0B2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8O0B2":[function() {},{}]},["79kPs","1xC6H","7F5Te"], "7F5Te", "parcelRequiref94e")
 
 //# sourceMappingURL=index.0513734e.js.map

@@ -46843,22 +46843,31 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 3rem 1.5rem 6rem;
 }
 
-.skill-bar-wrapper {
-  font-family: Roboto, monospace;
+.resume-job {
+  flex: 0 0 100%;
+  font-family: Bitter;
 }
 
-.skill-bar-wrapper .skill-bar {
-  background: #0000004d;
-  width: 100%;
-  height: 10px;
-  margin-top: .5rem;
+.resume-job:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.resume-job .resume-job-title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.resume-job .resume-job-title small {
+  font-size: 50%;
   display: block;
 }
 
-.skill-bar-wrapper .skill-bar .skill-bar-inner {
-  background: linear-gradient(90deg, #f652a04d, #f652a0);
-  height: 100%;
-  transition: width .5s;
+.resume-job ul {
+  margin-left: 1rem;
+  list-style: disc;
 }
 
 .pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis, .file-cta, .file-name, .select select, .textarea, .input, .button {
@@ -58525,31 +58534,22 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 3rem 1.5rem 6rem;
 }
 
-.resume-job {
-  flex: 0 0 100%;
-  font-family: Bitter;
+.skill-bar-wrapper {
+  font-family: Roboto, monospace;
 }
 
-.resume-job:not(:last-child) {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.resume-job .resume-job-title {
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 1em;
-}
-
-.resume-job .resume-job-title small {
-  font-size: 50%;
+.skill-bar-wrapper .skill-bar {
+  background: #0000004d;
+  width: 100%;
+  height: 10px;
+  margin-top: .5rem;
   display: block;
 }
 
-.resume-job ul {
-  margin-left: 1rem;
-  list-style: disc;
+.skill-bar-wrapper .skill-bar .skill-bar-inner {
+  background: linear-gradient(90deg, #f652a04d, #f652a0);
+  height: 100%;
+  transition: width .5s;
 }
 
 /*# sourceMappingURL=index.b249f258.css.map */
